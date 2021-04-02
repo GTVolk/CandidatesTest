@@ -8,4 +8,6 @@ public interface CandidateRepository extends CrudRepository<Candidate, Integer> 
 
     @Override
     List<Candidate> findAll();
+
+    List<Candidate> findByStatus(String status);
 }

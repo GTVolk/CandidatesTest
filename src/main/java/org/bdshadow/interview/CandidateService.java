@@ -7,6 +7,8 @@ import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import javax.transaction.Transactional.TxType;
+
 import java.util.List;
 
 @Service
@@ -18,5 +20,10 @@ public class CandidateService {
     @Transactional
     public List<Candidate> getAllCandidates() {
         return candidateRepository.findAll();
+    }
+
+    @Transactional(TxType.SUPPORTS)
+    public List<Candidate> getByStatus(String statusName) {
+        return candidateRepository.findByStatus(null);
     }
 }

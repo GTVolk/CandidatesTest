@@ -23,6 +23,6 @@ public class CandidateController {
     // TODO: fix this method
     @GetMapping("/candidates-no-status")
     public ResponseEntity<List<Candidate>> findCandidatesWithNoStatus() {
-        return new ResponseEntity<>(Collections.emptyList(), HttpStatus.OK);
+        return new ResponseEntity<>(candidateService.getByStatus(null), HttpStatus.OK);
     }
 }
