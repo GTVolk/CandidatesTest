@@ -3,7 +3,6 @@ package org.bdshadow.interview;
 import lombok.RequiredArgsConstructor;
 import org.bdshadow.interview.jpa.Candidate;
 import org.bdshadow.interview.jpa.CandidateRepository;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;

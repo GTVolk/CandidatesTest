@@ -7,7 +7,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import java.util.Collections;
 import java.util.List;
 
 @Controller
@@ -20,7 +19,6 @@ public class CandidateController {
         return new ResponseEntity<>(candidateService.getAllCandidates(), HttpStatus.OK);
     }
 
-    // TODO: fix this method
     @GetMapping("/candidates-no-status")
     public ResponseEntity<List<Candidate>> findCandidatesWithNoStatus() {
         return new ResponseEntity<>(candidateService.getByStatus(null), HttpStatus.OK);
